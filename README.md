@@ -7,3 +7,6 @@
 安装maven管理框架
 安装Appium
 安装虚拟机orAndroid手机
+
+
+项目已实现封装，可直接down，部署环境运行
