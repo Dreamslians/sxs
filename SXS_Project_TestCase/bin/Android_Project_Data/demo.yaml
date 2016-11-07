@@ -1,0 +1,24 @@
+#说明
+#input:
+#  type: id
+#  value: kw
+#searchbutton: {type: id,value: su}
+# 以上两种格式都可以
+
+
+# HomePage 元素库--------------------------------------------------------------------------------------------------------------------------------------------
+JumpButton:
+type: id
+value: "com.sxsfinance.SXS:id/act_main_tab_rb_1"
+HomePageButton:
+type: id
+value: "act_main_tab_rb_1"
+ProductButton:
+  type: id
+  value: "act_main_tab_rb_2"
+UserButton:
+  type: id
+  value: "act_main_tab_rb_3"
+FindButton:
+  type: id
+  value: "act_main_tab_rb_4"
