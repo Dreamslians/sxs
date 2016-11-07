@@ -1,0 +1,39 @@
+#说明
+#input:
+#  type: id
+#  value: kw
+#searchbutton: {type: id,value: su}
+# 以上两种格式都可以
+
+
+# HomePage 元素库--------------------------------------------------------------------------------------------------------------------------------------------
+HomePageLog:
+  type: xpath
+  value: "//a[contains(.,'首页')]"
+Product_project:
+  type: xpath
+  value: "//a[contains(.,'产品详情')]"
+Saft:
+  type: xpath
+  value: "//a[contains(.,'安全保障')]"
+AboutUs:
+  type: xpath
+  value: "//a[contains(.,'关于我们')]"
+App_download:
+  type: xpath
+  value: "//a[contains(.,'APP下载')]"
+HomePage_Assert:
+  type: xpath
+  value: "//p[contains(.,'世人只记住师兄的500年，却无人知晓我等你的300万年')]"
+Product_Assert:
+  type: xpath
+  value: "//p[contains(.,'下载小沙，收益天天见')]"
+Saft_Assert:
+  type: xpath
+  value: "//p[contains(.,'下载小沙，安全有宝杖')]"
+About_Assert:
+  type: xpath
+  value: "//span[contains(.,'客服工作时间  09:00-21:00')]"
+App_Assert:
+  type: xpath
+  value: "//p[contains(.,'极致体验')]"
