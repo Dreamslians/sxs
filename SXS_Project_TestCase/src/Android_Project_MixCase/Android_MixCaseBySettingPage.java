@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 /**
  * Created by Dreamslians on 2016/11/29.
  */
-public class Android_MixCaseOne
+public class Android_MixCaseBySettingPage
 {
     Android_RegisterPage ar = new Android_RegisterPage();
 

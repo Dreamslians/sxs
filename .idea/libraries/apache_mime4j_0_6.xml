@@ -1,0 +1,56 @@
+<component name="libraryTable">
+  <library name="apache-mime4j-0.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/apache-mime4j-0.6.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/bsh-1.3.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/cglib-nodep-2.1_3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/commons-codec-1.10.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/commons-exec-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/commons-io-2.4.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/commons-lang3-3.4.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/commons-logging-1.1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/cssparser-0.9.16.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/gson-2.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/guava-18.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/hamcrest-library-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/htmlunit-2.17.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/htmlunit-core-js-2.17.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/httpclient-4.4.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/httpcore-4.4.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/httpmime-4.4.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/java-client-3.4.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jcommander-1.29.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jetty-io-9.2.11.v20150529.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jetty-util-9.2.11.v20150529.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jna-4.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jna-platform-4.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jsp-api.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/junit-4.12.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jxl.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/jyaml-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/nekohtml-1.9.22.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/netty-3.5.7.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/phantomjsdriver-1.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/re-sign.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/sac-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-java-2.46.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-java-2.47.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-server-standalone-2.46.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/serializer-2.7.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/servlet-api.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/testng-6.8.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/websocket-api-9.2.11.v20150529.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/websocket-client-9.2.11.v20150529.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/websocket-common-9.2.11.v20150529.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/xalan-2.7.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/xercesImpl-2.11.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/xml-apis-1.4.01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-java-2.47.1-srcs.jar!/" />
+    </SOURCES>
+  </library>
+</component>
