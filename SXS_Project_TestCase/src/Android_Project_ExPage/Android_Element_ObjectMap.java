@@ -1,10 +1,10 @@
 package Android_Project_ExPage;
 
+import org.openqa.selenium.By;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
-import org.openqa.selenium.By;
 
 public class Android_Element_ObjectMap {
 	Properties properties;
@@ -31,7 +31,7 @@ public class Android_Element_ObjectMap {
 		locatorValue = new String(locatorValue.getBytes("ISO-8859-1"),"UTF-8");
 		
 		//输出获取到的locatorType和locatorValue
-		System.out.println("获取到的元素类型: "+locatorType+"获取到的元素定位表达式: "+locatorValue);
+//		System.out.println("获取到的元素类型: "+locatorType+"获取到的元素定位表达式: "+locatorValue);
 		
 		//根据locatorTyoe判断返回的By类型定位方式
 		if(locatorType.toLowerCase().equals("xpath")){
