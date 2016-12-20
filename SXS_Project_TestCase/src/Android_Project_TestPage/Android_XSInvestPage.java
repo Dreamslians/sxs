@@ -29,7 +29,7 @@ public class Android_XSInvestPage
     }
 
     public void doProductPageXSInvestTools() throws Exception {
-        Assert.assertEquals("100元起投，金额需为100整数倍", Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestTools")).getText());
+        Assert.assertEquals("100元起投,金额需为100的整数倍", Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestTools")).getText());
     }
 
     public void doProductPageXSInvestMoneyAdd() throws Exception {

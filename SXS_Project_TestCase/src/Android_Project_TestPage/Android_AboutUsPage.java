@@ -21,7 +21,7 @@ public class Android_AboutUsPage
     }
     public void clickSettingPageAboutVersion() throws Exception{
         Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("SettingPageAboutVersion")).click();
-        Assert.assertEquals("V1.2.2.1",Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("SettingPageAboutVersion")).getText());
+        Assert.assertEquals("V1.2.4",Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("SettingPageAboutVersion")).getText());
     }
     public void clickSettingPageAboutChat() throws Exception{
         Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("SettingPageAboutChat")).click();

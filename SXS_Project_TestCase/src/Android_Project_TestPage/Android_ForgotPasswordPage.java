@@ -22,7 +22,7 @@ public class Android_ForgotPasswordPage
 	}
 
 	public void doFoundPasswordPageTelephone(String Telephone) throws Exception {
-		Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("FoundPasswordPageGetCode")).sendKeys(Telephone);
+		Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("FoundPasswordPageTelephone")).sendKeys(Telephone);
 	}
 
 	public void doFoundPasswordPageGetCode() throws Exception {

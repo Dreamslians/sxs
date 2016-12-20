@@ -33,6 +33,7 @@ public class Android_AboutUsPage_TestCase
     public void doAboutUsTest() throws Exception
     {
         System.out.println("Android_AboutUsPage_TestCase" + "开始运行");
+
         try
         {
             pl.doLoginByJump(Baseinfo.AboutUSPageTelephone, Baseinfo.AboutUSPagePassword);

@@ -39,7 +39,7 @@ public class Android_LoginPage_TestCase
 		{
 			try
 			{
-				Assert.assertEquals("我的资产",
+				Assert.assertEquals("我的资产(元)",
 						Android_LoadDevice_NotReset.driver.findElement(al.ao.getLocaator("TredtyTextTittle")).getText());
 				po.doLoginOutByUserPage();
 				Assert.assertEquals("首页",

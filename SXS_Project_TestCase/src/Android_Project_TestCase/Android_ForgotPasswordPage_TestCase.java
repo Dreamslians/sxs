@@ -45,7 +45,7 @@ public class Android_ForgotPasswordPage_TestCase
             {
                 System.out.println("登录失败");
             }
-            Assert.assertEquals("我的资产", Android_LoadDevice_NotReset.driver.findElement(ap.ao.getLocaator("MyPageTittle")).getText());
+            Assert.assertEquals("我的资产(元)", Android_LoadDevice_NotReset.driver.findElement(ap.ao.getLocaator("MyPageTittle")).getText());
             po.doLoginOutByUserPage();
             System.out.println(Baseinfo.ForgotPasswordTelephone + "退出登陆");
             System.out.println("******************成功******************");

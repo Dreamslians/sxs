@@ -59,6 +59,6 @@ public class PublicLoginPage
         doLoginPagePasswordText(PassWord);
         doLoginPageLoginSubmitButton();
         Thread.sleep(500);
-        Assert.assertEquals("我的资产", Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("MyPageTittle")).getText());
+        Assert.assertEquals("我的资产(元)", Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("MyPageTittle")).getText());
     }
 }

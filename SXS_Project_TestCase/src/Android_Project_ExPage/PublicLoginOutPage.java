@@ -38,7 +38,7 @@ public class PublicLoginOutPage {
     public void doLoginOutByResetApp() throws Exception {
         doJumpButton();
         doUserButton();
-        Thread.sleep(300);
+        Thread.sleep(500);
         doMyPageUserSettingButton();
         doSettingPageSignOutButton();
         doSettingPageSignOutSureButton();

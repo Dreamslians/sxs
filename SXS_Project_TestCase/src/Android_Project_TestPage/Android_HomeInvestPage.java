@@ -15,7 +15,7 @@ public class Android_HomeInvestPage
         Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("HomePageButton")).click();
     }
     public void doHomePageInvestButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElementByXPath("//android.widget.TextView[contains(@text,'DQ17052913')]").click();
+        Android_LoadDevice_NotReset.driver.findElementByXPath("//android.widget.TextView[contains(@text,'DQ16121913')]").click();
     }
     public void doProductMorePageTreatyText() throws Exception{
         Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageTreatyText")).click();
