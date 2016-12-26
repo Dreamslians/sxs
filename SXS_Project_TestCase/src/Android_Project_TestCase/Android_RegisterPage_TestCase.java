@@ -1,14 +1,13 @@
 package Android_Project_TestCase;
 
 import Android_Project_Data.Android_RandomTelephoneNumber;
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_RegisterPage;
 import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Android_RegisterPage_TestCase
+public class Android_RegisterPage_TestCase extends BasePage
 {
 
     Android_RegisterPage ar = new Android_RegisterPage();
@@ -16,16 +15,6 @@ public class Android_RegisterPage_TestCase
     PublicLoginOutPage po = new PublicLoginOutPage();
     String RanTelephone = at.randomtelephonenumber();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
-
-    @BeforeMethod
-    public void doBefore() throws Exception {
-        ar.an.setUp();
-    }
-
-    @AfterMethod
-    public void TearDown() throws Exception {
-        Android_LoadDevice_NotReset.driver.quit();
-    }
 
     // 注册成功案例-----手机号码&验证码正确
     @Test(priority = 1)

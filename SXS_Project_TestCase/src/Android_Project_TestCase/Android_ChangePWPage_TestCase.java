@@ -1,33 +1,20 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_ChangePayPWPage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Created by Dreamslians on 2016/11/22.
  */
-public class Android_ChangePWPage_TestCase
+public class Android_ChangePWPage_TestCase extends BasePage
 {
 
     Android_ChangePayPWPage ac = new Android_ChangePayPWPage();
     PublicLoginPage pl = new PublicLoginPage();
     PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
-
-    @BeforeMethod
-    public void doSetUp() throws Exception
-    {
-        ac.an.setUp();
-    }
-
-    @AfterMethod
-    public void TearDown()
-    {
-        Android_LoadDevice_NotReset.driver.quit();
-    }
 
     @Test
     public void doChangePayPWTest() throws Exception

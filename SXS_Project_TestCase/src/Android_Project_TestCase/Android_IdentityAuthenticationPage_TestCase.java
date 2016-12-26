@@ -1,30 +1,18 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
+import Android_Project_TestPage.Android_IdentityAuthenticationPage;
 import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import Android_Project_TestPage.Android_IdentityAuthenticationPage;
-
-public class Android_IdentityAuthenticationPage_TestCase
+public class Android_IdentityAuthenticationPage_TestCase extends BasePage
 {
 
 	Android_IdentityAuthenticationPage ai = new Android_IdentityAuthenticationPage();
 	PublicLoginPage pl = new PublicLoginPage();
 	PublicLoginOutPage po = new PublicLoginOutPage();
 	Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
-
-	@BeforeMethod
-	public void doSetUp() throws Exception {
-		ai.an.setUp();
-	}
-
-	@AfterMethod
-	public void TearDown() {
-		Android_LoadDevice_NotReset.driver.quit();
-	}
 
 	@Test(priority = 1)
 	public void doIdentityAuthentication() throws Exception {

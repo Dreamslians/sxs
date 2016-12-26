@@ -1,15 +1,14 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_MoneyFlowPage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Created by Dreamslians on 2016/11/28.
  */
-public class Android_MoneyFlowPage_TestCase
+public class Android_MoneyFlowPage_TestCase extends BasePage
 {
     Android_MoneyFlowPage am = new Android_MoneyFlowPage();
 
@@ -19,17 +18,6 @@ public class Android_MoneyFlowPage_TestCase
 
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
 
-    @BeforeMethod
-    public void doSetUp() throws Exception
-    {
-        am.an.setUp();
-    }
-
-    @AfterMethod
-    public void TearDown()
-    {
-        Android_LoadDevice_NotReset.driver.quit();
-    }
 
     @Test
     public void doMoneyFlow_Test() throws Exception

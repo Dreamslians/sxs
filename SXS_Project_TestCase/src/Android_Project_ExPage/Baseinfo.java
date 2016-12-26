@@ -3,7 +3,7 @@ package Android_Project_ExPage;
 public class Baseinfo
 {
 
-    public static final String AndroidDriverURL = "http://192.168.1.195:4723/wd/hub";
+    public static final String AndroidDriverURL = "http://192.168.1.231:4723/wd/hub";
 
     public static final String AndroidDriverName = "192.168.56.101:5555";
 

@@ -1,6 +1,6 @@
 package Android_Project_TestPage;
 
-import Android_Project_Data.BasePage;
+import Android_Project_ExPage.BasePage;
 import org.junit.Assert;
 
 import Android_Project_ExPage.Android_Element_ObjectMap;

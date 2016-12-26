@@ -1,30 +1,17 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_LoginPage;
+import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
-public class Android_LoginPage_TestCase
+public class Android_LoginPage_TestCase extends BasePage
 {
 	Android_LoginPage al = new Android_LoginPage();
 	PublicLoginPage pl = new PublicLoginPage();
 	PublicLoginOutPage po = new PublicLoginOutPage();
 	Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
-
-	@BeforeMethod
-	public void doBefore() throws Exception {
-		al.an.setUp();
-
-	}
-
-	@AfterMethod
-	public void TearDown() {
-		Android_LoadDevice_NotReset.driver.quit();
-	}
 
 	@Test(priority = 1)
 	public void doLoginTestForSuccess() throws Exception {

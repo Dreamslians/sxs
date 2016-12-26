@@ -1,8 +1,8 @@
 package Android_Project_TestPage;
 
-import Android_Project_Data.BasePage;
 import Android_Project_ExPage.Android_Element_ObjectMap;
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
+import Android_Project_ExPage.BasePage;
 import org.testng.Assert;
 
 /**
@@ -62,6 +62,11 @@ public class Android_AddBankCardPage extends BasePage
         Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("CancelButton")).click();
     }
 
+    public void doUserButton() throws Exception
+    {
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("UserButton")).click();
+    }
+
     public void doRechargeTest(String money) throws Exception
     {
         doMyPageRechargeButton();
@@ -113,7 +118,7 @@ public class Android_AddBankCardPage extends BasePage
         Assert.assertEquals(Payphone, Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("PayMoneyPhone")).getText());
         doPayMoneyPhone(Payphone);
         GetCode();
-        if(Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("paymonkeygetCode")).getText().contains("S"))
+        if (Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("paymonkeygetCode")).getText().contains("S"))
         {
             System.out.println("绑卡成功");
             Thread.sleep(2000);
@@ -121,7 +126,8 @@ public class Android_AddBankCardPage extends BasePage
             Cancel();
             Assert.assertEquals(valMoney, Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("MypageRechargeInputMoney")).getText());
             System.out.println("金额校验成功");
-        }else{
+        } else
+        {
             System.out.println("绑卡失败");
         }
 

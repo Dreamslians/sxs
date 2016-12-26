@@ -1,7 +1,5 @@
 package Android_Project_ExPage;
 
-import Android_Project_Data.BasePage;
-
 public class PublicLoginOutPage extends BasePage{
 
     public void doJumpButton() throws Exception {

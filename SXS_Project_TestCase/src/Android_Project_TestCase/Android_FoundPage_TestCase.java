@@ -1,32 +1,19 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_FoundPage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Created by Dreamslians on 2016/11/18.
  */
-public class Android_FoundPage_TestCase
+public class Android_FoundPage_TestCase extends BasePage
 {
     Android_FoundPage af = new Android_FoundPage();
     PublicLoginPage pl = new PublicLoginPage();
     PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
-
-    @BeforeMethod
-    public void doSetUp() throws Exception
-    {
-        af.an.setUp();
-    }
-
-    @AfterMethod
-    public void TearDown()
-    {
-        Android_LoadDevice_NotReset.driver.quit();
-    }
 
     @Test
     public void doFoundPageTest() throws Exception

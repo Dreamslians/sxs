@@ -1,27 +1,16 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
 import Android_Project_ExPage.PublicLoginPage;
 import Android_Project_TestPage.Android_GesturePasswordPage;
 import io.appium.java_client.TouchAction;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Android_GesturePasswordPage_TestCase
+public class Android_GesturePasswordPage_TestCase extends BasePage
 {
 	Android_GesturePasswordPage ag = new Android_GesturePasswordPage();
 	PublicLoginPage pl = new PublicLoginPage();
-
-	@BeforeMethod
-	public void doSetUp() throws Exception {
-		ag.an.setUp();
-	}
-
-	@AfterMethod
-	public void TearDown() {
-		Android_LoadDevice_NotReset.driver.quit();
-	}
 
 	@Test
 	public void doGesturePasswordTest() throws Exception {

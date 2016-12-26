@@ -1,30 +1,20 @@
 package Android_Project_TestCase;
 
+import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_XSInvestPage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Created by Dreamslians on 2016/11/18.
  */
-public class Android_XSInvestPage_TestCae
+public class Android_XSInvestPage_TestCae extends BasePage
 {
     Android_XSInvestPage ax = new Android_XSInvestPage();
     PublicLoginPage pl = new PublicLoginPage();
     PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
 
-    @BeforeMethod
-    public void doSetUp() throws Exception {
-        ax.an.setUp();
-    }
-
-    @AfterMethod
-    public void TearDown() {
-        Android_LoadDevice_NotReset.driver.quit();
-    }
 
     @Test(priority = 1)
     public void doXSInvestTest() throws Exception {
