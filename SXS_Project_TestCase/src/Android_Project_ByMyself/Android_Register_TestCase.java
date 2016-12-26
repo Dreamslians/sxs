@@ -1,17 +1,15 @@
 package Android_Project_ByMyself;
 
-import org.testng.annotations.Test;
-
 import Android_Project_ExPage.Android_Element_ObjectMap;
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
-
 import org.testng.AssertJUnit;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-import org.testng.annotations.BeforeTest;
 
 public class Android_Register_TestCase {
 
@@ -24,7 +22,6 @@ public class Android_Register_TestCase {
 
 	@Test
 	public void doRegister() throws Exception {
-		Android_Element_ObjectMap ao = new Android_Element_ObjectMap("src/Android_Project_ExPage/demo.properties");
 		String verify = "";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -38,31 +35,31 @@ public class Android_Register_TestCase {
 			System.out.println(e);
 		}
 		Thread.sleep(500);
-		an.driver.findElement(ao.getLocaator("JumpButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("JumpButton")).click();
 		Thread.sleep(1000);
-		an.driver.findElement(ao.getLocaator("UserButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("UserButton")).click();
 
-		an.driver.findElement(ao.getLocaator("LoginPageRegisterButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("LoginPageRegisterButton")).click();
 
-		an.driver.findElement(ao.getLocaator("RegisterPageTelephone")).sendKeys("15011111111");
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageTelephone")).sendKeys("15011111111");
 
-		an.driver.findElement(ao.getLocaator("RegisterPageRegisterCode")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageRegisterCode")).click();
 		Thread.sleep(3000);
 
-		an.driver.findElement(ao.getLocaator("RegisterPageRegisterCodeText")).sendKeys(verify);
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageRegisterCodeText")).sendKeys(verify);
 
-		an.driver.findElement(ao.getLocaator("RegisterPageAgreeButton")).click();
-		an.driver.findElement(ao.getLocaator("RegisterPageAgreeButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageAgreeButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageAgreeButton")).click();
 
-		an.driver.findElement(ao.getLocaator("RegisterPageRegisterText")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageRegisterText")).click();
 		AssertJUnit.assertEquals("沙小僧理财用户协议", "沙小僧理财用户协议");
 
-		an.driver.findElement(ao.getLocaator("RegisterPageRegisterTextReturnButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageRegisterTextReturnButton")).click();
 
-		an.driver.findElement(ao.getLocaator("RegisterPageRegisterButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageRegisterButton")).click();
 		Thread.sleep(3000);
-		an.driver.findElement(ao.getLocaator("RegisterPageVerifyCode")).sendKeys(verify);
-		an.driver.findElement(ao.getLocaator("RegisterPageRegisterButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageVerifyCode")).sendKeys(verify);
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("RegisterPageRegisterButton")).click();
 
 	}
 

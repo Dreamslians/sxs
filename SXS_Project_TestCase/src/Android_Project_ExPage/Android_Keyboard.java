@@ -12,9 +12,6 @@ public class Android_Keyboard implements AndroidKeyCode,AndroidKeyMetastate{
     public static void BACK(){
         Android_LoadDevice_NotReset.driver.pressKeyCode(4);
     }
-    public static void Input8(){
-        Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-    }
     //清除键
     public static void BACKSPACE (){
         Android_LoadDevice_NotReset.driver.pressKeyCode(67);
@@ -48,5 +45,35 @@ public class Android_Keyboard implements AndroidKeyCode,AndroidKeyMetastate{
     //空格键
     public static void SPACE (){
         Android_LoadDevice_NotReset.driver.pressKeyCode(62);
+    }
+    //数字键
+    public static void num(){
+        //0
+        Android_LoadDevice_NotReset.driver.pressKeyCode(7);
+        //1
+        Android_LoadDevice_NotReset.driver.pressKeyCode(8);
+        //2
+        Android_LoadDevice_NotReset.driver.pressKeyCode(9);
+        //3
+        Android_LoadDevice_NotReset.driver.pressKeyCode(10);
+        //4
+        Android_LoadDevice_NotReset.driver.pressKeyCode(11);
+        //5
+        Android_LoadDevice_NotReset.driver.pressKeyCode(12);
+        //6
+        Android_LoadDevice_NotReset.driver.pressKeyCode(13);
+        //7
+        Android_LoadDevice_NotReset.driver.pressKeyCode(14);
+        //8
+        Android_LoadDevice_NotReset.driver.pressKeyCode(15);
+        //9
+        Android_LoadDevice_NotReset.driver.pressKeyCode(16);
+    }
+    public static void clearText(String text){
+        Android_LoadDevice_NotReset.driver.pressKeyCode(123);
+        for (int i = 0; i < text.length(); i++)
+        {
+            Android_LoadDevice_NotReset.driver.pressKeyCode(67);
+        }
     }
 }

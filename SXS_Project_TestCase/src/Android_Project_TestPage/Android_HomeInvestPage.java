@@ -1,5 +1,6 @@
 package Android_Project_TestPage;
 
+import Android_Project_Data.BasePage;
 import Android_Project_ExPage.Android_Element_ObjectMap;
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
 import org.testng.Assert;
@@ -7,63 +8,62 @@ import org.testng.Assert;
 /**
  * Created by Dreamslians on 2016/11/17.
  */
-public class Android_HomeInvestPage
+public class Android_HomeInvestPage extends BasePage
 {
-    Android_Element_ObjectMap ao = new Android_Element_ObjectMap("src/Android_Project_ExPage/demo.properties");
     public Android_LoadDevice_NotReset an = new Android_LoadDevice_NotReset();
     public void doHomePageButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("HomePageButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("HomePageButton")).click();
     }
     public void doHomePageInvestButton() throws Exception{
         Android_LoadDevice_NotReset.driver.findElementByXPath("//android.widget.TextView[contains(@text,'DQ16121913')]").click();
     }
     public void doProductMorePageTreatyText() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageTreatyText")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageTreatyText")).click();
     }
     public void doTredtyTextTittle() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("TredtyTextTittle")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("TredtyTextTittle")).click();
     }
     public void doTredtyTextReturnButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("TredtyTextReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("TredtyTextReturnButton")).click();
     }
     public void doProductMorePagePlanDetailText() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePagePlanDetailText")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePagePlanDetailText")).click();
     }
     public void doPlanDetailtittle() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("PlanDetailtittle")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("PlanDetailtittle")).click();
     }
     public void doPlanDetailReturnButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("PlanDetailReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("PlanDetailReturnButton")).click();
     }
     public void doProductMorePageInvestmentRecord() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentRecord")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentRecord")).click();
     }
     public void doInvestmentRecordTittle() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("InvestmentRecordTittle")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("InvestmentRecordTittle")).click();
     }
     public void doInvestmentRecordReturnButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("InvestmentRecordReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("InvestmentRecordReturnButton")).click();
     }
     public void doProductMorePageInvestmentSubmitButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentSubmitButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentSubmitButton")).click();
     }
     public void doProductMorePageInvestmentMoneySureText() throws Exception{
-        Assert.assertEquals("1000元起投,金额需为1000的整数倍",Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentMoneySureText")).getText());
+        Assert.assertEquals("1000元起投,金额需为1000的整数倍",Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentMoneySureText")).getText());
     }
     public void doProductMorePageInvestmentStartMoney(String Money)throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentStartMoney")).clear();
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentStartMoney")).sendKeys(Money);
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentStartMoney")).clear();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentStartMoney")).sendKeys(Money);
     }
     public void doProductMorePageInvestmentSureSubmitButton() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentSureSubmitButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentSureSubmitButton")).click();
     }
     //相对元素定位，不准确，费时间
     public void doProductMorePageInvestmentSureSubmitButtonByOk() throws Exception{
 //        Android_LoadDevice_NotReset.driver.findElementByXPath("//android.widget.Button[contains(@text,'完成')]").click();
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentSureSubmitButtonByOk")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentSureSubmitButtonByOk")).click();
     }
     public void doProductMorePageInvestMentSureSubmitButtonByReturn() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestMentSureSubmitButtonByReturn")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestMentSureSubmitButtonByReturn")).click();
     }
     public void doHomePageInvestTest(String Money) throws Exception{
         doHomePageButton();

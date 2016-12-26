@@ -7,11 +7,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Android_Element_ObjectMap {
-	Properties properties;
-	public Android_Element_ObjectMap(String proFile){
+
+	public static String property = "src/Android_Project_ExPage/demo.properties";
+
+	static Properties properties;
+	public Android_Element_ObjectMap(){
 		properties = new Properties();
 		try{
-			FileInputStream in = new FileInputStream(proFile);
+			FileInputStream in = new FileInputStream(property);
 			properties.load(in);
 			in.close();
 		}catch(IOException e){
@@ -19,9 +22,9 @@ public class Android_Element_ObjectMap {
 			e.printStackTrace();
 		}
 	}
-	
-	public By getLocaator(String ElementNamepropFile) throws Exception{
-		
+
+	public static By getLocaator(String ElementNamepropFile) throws Exception{
+
 		//根据变量ElementNamepropFile，从配置文件中读取对应的配置对象
 		String locator = properties.getProperty(ElementNamepropFile);
 		

@@ -1,14 +1,14 @@
 package Android_Project_TestPage;
 
+import Android_Project_Data.BasePage;
 import Android_Project_ExPage.Android_Element_ObjectMap;
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
 
 /**
  * Created by Dreamslians on 2016/11/28.
  */
-public class Android_SF_HistoryPage
+public class Android_SF_HistoryPage extends BasePage
 {
-    Android_Element_ObjectMap ao = new Android_Element_ObjectMap("src/Android_Project_ExPage/demo.properties");
     public Android_LoadDevice_NotReset an = new Android_LoadDevice_NotReset();
 
     public void doSF_History() throws Exception
@@ -28,30 +28,30 @@ public class Android_SF_HistoryPage
 
     public void doHistoryBySF_PPZQ() throws Exception
     {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("HistoryBySF_PPZQ")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("HistoryBySF_PPZQ")).click();
     }
 
     public void doReturn() throws Exception
     {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ReturnButton")).click();
     }
 
     public void doHistoryBySF_AgreeLook() throws Exception
     {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("HistoryBySF_AgreeLook")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("HistoryBySF_AgreeLook")).click();
     }
 
     public void doReturnByAgreeLook() throws Exception
     {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ReturnButton")).click();
     }
 
     public void doHistoryBySF_LookExit() throws Exception
     {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("HistoryBySF_LookExit")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("HistoryBySF_LookExit")).click();
     }
     public void doHistoryBySF_LookExitRetuen() throws Exception{
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("HistoryBySF_LookExitRetuen")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("HistoryBySF_LookExitRetuen")).click();
     }
 
     public void doFS_HistoryTest() throws Exception

@@ -12,8 +12,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class Android_HasLoginInvestment_TestCase {
 	Android_LoadDevice_NotReset an = new Android_LoadDevice_NotReset();
-	Android_Element_ObjectMap ao = new Android_Element_ObjectMap("src/Android_Project_ExPage/demo.properties");
-
+	
 	@BeforeMethod
 	public void doBefore() throws Exception {
 		an.setUp();
@@ -31,11 +30,11 @@ public class Android_HasLoginInvestment_TestCase {
 		String BankNumber = "6225758312340987";
 
 		Thread.sleep(2000);
-		an.driver.findElement(ao.getLocaator("JumpButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("JumpButton")).click();
 		Thread.sleep(5000);
-//		System.out.println(an.driver.findElement(ao.getLocaator("HomePageProductOne")).getText()+"打印元素输出结果");
+//		System.out.println(an.driver.findElement(Android_Element_ObjectMap.getLocaator("HomePageProductOne")).getText()+"打印元素输出结果");
 		an.driver.findElementByName("DQ16110111").click();
-//		an.driver.findElement(ao.getLocaator("HomePageProductOne")).click();
+//		an.driver.findElement(Android_Element_ObjectMap.getLocaator("HomePageProductOne")).click();
 
 		// AndroidElement e = null;
 		// an.driver.findElementsByXPath("//android.widget.TextView[contains@text,'DQ16102811']");
@@ -50,44 +49,44 @@ public class Android_HasLoginInvestment_TestCase {
 		// .findElementByXPath(
 		// "//android.widget.ListView[7]/android.widget.LinearLayout[0]/android.widget.TextView[0]")
 		// .click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageInvestmentSubmitButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentSubmitButton")).click();
 		Thread.sleep(2000);
-		an.driver.findElement(ao.getLocaator("ProductMorePageInvestmentMoneySureText")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentMoneySureText")).click();
 
 		AssertJUnit.assertEquals("1000元起投,金额需为1000的整数倍",
-				an.driver.findElement(ao.getLocaator("ProductMorePageInvestmentMoneySureText")).getText());
+				an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentMoneySureText")).getText());
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageInvestmentStartMoney")).clear();
-		an.driver.findElement(ao.getLocaator("ProductMorePageInvestmentStartMoney")).sendKeys(InvestMentMoney);
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentStartMoney")).clear();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentStartMoney")).sendKeys(InvestMentMoney);
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageCanUsedRedBag")).click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageNotUseRedBag")).click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageUseRedBag")).click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageCanUseRedBagReturnButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageCanUsedRedBag")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageNotUseRedBag")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageUseRedBag")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageCanUseRedBagReturnButton")).click();
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageNeedPayMoney")).click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageAgreeTextButton")).click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageAgreeTextButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageNeedPayMoney")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageAgreeTextButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageAgreeTextButton")).click();
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageInvestmentSureSubmitButton")).click();
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestmentTittle")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentSureSubmitButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestmentTittle")).click();
 		AssertJUnit.assertEquals("确认购买", "确认购买");
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestSureMoney")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestSureMoney")).click();
 		AssertJUnit.assertEquals(InvestMentMoney, InvestMentMoney);
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestBankChoosed")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestBankChoosed")).click();
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestBankTittle")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestBankTittle")).click();
 		AssertJUnit.assertEquals("银行卡列表", "银行卡列表");
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestBankName")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestBankName")).click();
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestBankListReturnButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestBankListReturnButton")).click();
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestBankNumber")).clear();
-		an.driver.findElement(ao.getLocaator("BankNumber")).sendKeys(BankNumber);
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestBankNumber")).clear();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("BankNumber")).sendKeys(BankNumber);
 
-		an.driver.findElement(ao.getLocaator("ProductMorePageSureInvestSubmit")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageSureInvestSubmit")).click();
 	}
 
 }

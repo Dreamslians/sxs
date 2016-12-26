@@ -40,10 +40,10 @@ public class Android_LoginPage_TestCase
 			try
 			{
 				Assert.assertEquals("我的资产(元)",
-						Android_LoadDevice_NotReset.driver.findElement(al.ao.getLocaator("TredtyTextTittle")).getText());
+						Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("TredtyTextTittle")).getText());
 				po.doLoginOutByUserPage();
 				Assert.assertEquals("首页",
-						Android_LoadDevice_NotReset.driver.findElement(al.ao.getLocaator("HomePageButton")).getText());
+						Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("HomePageButton")).getText());
 				System.out.println("*****************成功*****************");
 			} catch (Exception e)
 			{
@@ -61,20 +61,20 @@ public class Android_LoginPage_TestCase
 	public void doLoginTestForFail() throws Exception {
 		pl.doLoginByJump(Baseinfo.LoginTelephoneNumber, Baseinfo.LoginLongWrongPassWord);
 		Assert.assertEquals("请输入验证码", Android_LoadDevice_NotReset.driver
-				.findElement(al.ao.getLocaator("LoginPageVerifyCodeInput")).getText());
+				.findElement(Android_Element_ObjectMap.getLocaator("LoginPageVerifyCodeInput")).getText());
 	}
 
 	@Test(priority = 3)
 	public void doLoginTestForFailTwo() throws Exception {
 		pl.doLoginByJump(Baseinfo.LoginWrongTelephoneNumber, Baseinfo.LoginPassWord);
 		Assert.assertEquals("请输入验证码", Android_LoadDevice_NotReset.driver
-				.findElement(al.ao.getLocaator("LoginPageVerifyCodeInput")).getText());
+				.findElement(Android_Element_ObjectMap.getLocaator("LoginPageVerifyCodeInput")).getText());
 	}
 
 	@Test(priority = 4)
 	public void doLoginTestForFailThree() throws Exception {
 		pl.doLoginByJump(Baseinfo.LoginNullTelephoneNumber, Baseinfo.LoginNullPassWord);
 		Assert.assertEquals("请输入手机号码",
-				Android_LoadDevice_NotReset.driver.findElement(al.ao.getLocaator("LoginPageUsernameText")).getText());
+				Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("LoginPageUsernameText")).getText());
 	}
 }

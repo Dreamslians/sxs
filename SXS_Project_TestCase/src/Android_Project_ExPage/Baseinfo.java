@@ -3,7 +3,7 @@ package Android_Project_ExPage;
 public class Baseinfo
 {
 
-    public static final String AndroidDriverURL = "http://192.168.1.83:4723/wd/hub";
+    public static final String AndroidDriverURL = "http://192.168.1.195:4723/wd/hub";
 
     public static final String AndroidDriverName = "192.168.56.101:5555";
 
@@ -12,7 +12,7 @@ public class Baseinfo
     public static final String AndroidappActivity = "com.sxsfinance.SXS.actvity.main.GuidepageActivity";
     public static final String AndroidplatformVersion = "4.3";
 
-    public static final String AndroidappDir = "sxs_android_v1.2.4_2016-12-16.apk";
+    public static final String AndroidappDir = "sxs_android_v1.2.4_2016-12-22.apk";
 
 
     //************************登录页面操作所需值************************
@@ -31,13 +31,13 @@ public class Baseinfo
     //活期投资总额
 
     //************************登录页面操作所需值************************
-    public static final String LoginTelephoneNumber = "17301216444";
+    public static final String LoginTelephoneNumber = "17301216004";
     public static final String LoginWrongTelephoneNumber = "17301216000";
     public static final String LoginNullTelephoneNumber = "";
     public static final String LoginNullPassWord = "";
     public static final String LoginLongWrongPassWord = "qqqqqqq";
     public static final String LoginPassWord = "qqqqqq";
-    public static final String AssLoginPageByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216444'";
+    public static final String AssLoginPageByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216004'";
     //************************************************************************************************
 
     public static final String SqlUrl = "jdbc:mysql://123.57.72.212:8301/sxs_vault";
@@ -46,7 +46,6 @@ public class Baseinfo
 
 
     public static final String AssByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216102'";
-
 
 
     public static final String GetVerifyByTest = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='15313960614' ORDER BY id DESC LIMIT 1;";
@@ -119,8 +118,8 @@ public class Baseinfo
     //************************************************************************************************
 
     //***********************支付密码页面操作所需值***********************
-    public static final String PayPWTelephone= "17301216444";
-    public static final String PayPWPassword= "123456";
+    public static final String PayPWTelephone = "17301216444";
+    public static final String PayPWPassword = "123456";
     public static final String GetVerifyByFindPayPW = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='17301216444' ORDER BY id DESC LIMIT 1;";
     public static final String AssPayPWByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216444'";
     //************************************************************************************************
@@ -131,5 +130,8 @@ public class Baseinfo
     public static final String AboutUSPagePassword = "qqqqqq";
     public static final String AssAboutUSByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216004'";
     //************************************************************************************************
+    //************************添加银行卡操作（AndBank）*************************
+    public static final String RechargeInputMoney = "10";
+    public static final String BankNumber = "6214"+ "8301"+ "0162"+ "9193";
 
 }

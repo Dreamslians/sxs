@@ -1,5 +1,6 @@
 package Android_Project_TestPage;
 
+import Android_Project_Data.BasePage;
 import Android_Project_ExPage.Android_Element_ObjectMap;
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
 import org.testng.Assert;
@@ -7,62 +8,61 @@ import org.testng.Assert;
 /**
  * Created by Dreamslians on 2016/11/18.
  */
-public class Android_XSInvestPage
+public class Android_XSInvestPage extends BasePage
 {
     public Android_LoadDevice_NotReset an = new Android_LoadDevice_NotReset();
-    Android_Element_ObjectMap ao = new Android_Element_ObjectMap("src/Android_Project_ExPage/demo.properties");
 
     public void doProductPage() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductButton")).click();
     }
 
     public void doProductPageSFInvest() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageSFInvest")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageSFInvest")).click();
     }
 
     public void doProductPageXSInvest() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvest")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvest")).click();
     }
 
     public void doProductPageXSInvestInvestButton() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestInvestButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestInvestButton")).click();
     }
 
     public void doProductPageXSInvestTools() throws Exception {
-        Assert.assertEquals("100元起投,金额需为100的整数倍", Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestTools")).getText());
+        Assert.assertEquals("100元起投,金额需为100的整数倍", Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestTools")).getText());
     }
 
     public void doProductPageXSInvestMoneyAdd() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneyAdd")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneyAdd")).click();
     }
 
     public void doProductPageXSInvestMoneyLost() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneyLost")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneyLost")).click();
     }
 
     public void doProductPageXSInvestMoneyInput(String money) throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneyInput")).clear();
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneyInput")).sendKeys(money);
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneyInput")).clear();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneyInput")).sendKeys(money);
     }
 
     public void doProductPageXSInvestMoneyAgree() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneyAgree")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneyAgree")).click();
     }
 
     public void doProductPageXSInvestMoneySubmit() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneySubmit")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneySubmit")).click();
     }
 
     public void doProductPageXSInvestMoneyOk() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductPageXSInvestMoneyOk")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductPageXSInvestMoneyOk")).click();
     }
 
     public void doProductMorePageFinshReturnButton() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageFinshReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageFinshReturnButton")).click();
     }
 
     public void doUserPage() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("UserButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("UserButton")).click();
     }
 
     public void doXSInvestTest(String money) throws Exception {
@@ -127,51 +127,51 @@ public class Android_XSInvestPage
     }
 
     public void doProductpageXSMorePage() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductpageXSMorePage")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductpageXSMorePage")).click();
     }
 
     public void doProductMorePageTreatyText() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageTreatyText")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageTreatyText")).click();
     }
 
     public void doTredtyTextTittle() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("TredtyTextTittle")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("TredtyTextTittle")).click();
     }
 
     public void doTredtyTextReturnButton() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("TredtyTextReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("TredtyTextReturnButton")).click();
     }
 
     public void doProductMorePagePlanDetailText() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePagePlanDetailText")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePagePlanDetailText")).click();
     }
 
     public void doPlanDetailtittle() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("PlanDetailtittle")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("PlanDetailtittle")).click();
     }
 
     public void doPlanDetailReturnButton() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("PlanDetailReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("PlanDetailReturnButton")).click();
     }
 
     public void doProductMorePageInvestmentRecord() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentRecord")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentRecord")).click();
     }
 
     public void doInvestmentRecordTittle() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("InvestmentRecordTittle")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("InvestmentRecordTittle")).click();
     }
 
     public void doInvestmentRecordReturnButton() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("InvestmentRecordReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("InvestmentRecordReturnButton")).click();
     }
 
     public void doProductMorePageInvestmentSubmitButton() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageInvestmentSubmitButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageInvestmentSubmitButton")).click();
     }
 
     public void doProductMorePageFinshReturnButtonByInvestFinsh() throws Exception {
-        Android_LoadDevice_NotReset.driver.findElement(ao.getLocaator("ProductMorePageFinshReturnButton")).click();
+        Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductMorePageFinshReturnButton")).click();
     }
 
     public void doMoreXSInvestPageTest(String money) throws Exception {

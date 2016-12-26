@@ -1,5 +1,6 @@
 package Android_Project_TestCase;
 
+import Android_Project_Data.BaseInterface;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_AboutUsPage;
 import org.testng.annotations.AfterMethod;
@@ -9,25 +10,13 @@ import org.testng.annotations.Test;
 /**
  * Created by Dreamslians on 2016/11/17.
  */
-public class Android_AboutUsPage_TestCase
+public class Android_AboutUsPage_TestCase extends BaseInterface
 {
 
     Android_AboutUsPage aa = new Android_AboutUsPage();
     PublicLoginPage pl = new PublicLoginPage();
     PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
-
-    @BeforeMethod
-    public void doSetUp() throws Exception
-    {
-        aa.an.setUp();
-    }
-
-    @AfterMethod
-    public void TearDown()
-    {
-        Android_LoadDevice_NotReset.driver.quit();
-    }
 
     @Test
     public void doAboutUsTest() throws Exception

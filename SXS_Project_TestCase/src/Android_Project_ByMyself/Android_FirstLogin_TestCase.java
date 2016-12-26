@@ -12,7 +12,6 @@ import io.appium.java_client.android.AndroidDriver;
 public class Android_FirstLogin_TestCase {
 
 	Android_LoadDevice_Reset an = new Android_LoadDevice_Reset();
-	Android_Element_ObjectMap ao = new Android_Element_ObjectMap("src/Android_Project_ExPage/demo.properties");
 
 	@BeforeMethod
 	public void doBefore() throws Exception {
@@ -36,20 +35,20 @@ public class Android_FirstLogin_TestCase {
 		Thread.sleep(2000);
 		an.driver.findElement(By.id("com.sxsfinance.SXS:id/button")).click();
 		Thread.sleep(1000);
-		an.driver.findElement(ao.getLocaator("JumpButton")).click();
-		an.driver.findElement(ao.getLocaator("HomePageButton")).click();
-		an.driver.findElement(ao.getLocaator("ProductButton")).click();
-		an.driver.findElement(ao.getLocaator("FoundButton")).click();
-		an.driver.findElement(ao.getLocaator("UserButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("JumpButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("HomePageButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("ProductButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("FoundButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("UserButton")).click();
 
-		an.driver.findElement(ao.getLocaator("LoginPageUsernameText")).sendKeys("17301216004");
-		an.driver.findElement(ao.getLocaator("LoginPagePasswordText")).sendKeys("qqqqqq");
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("LoginPageUsernameText")).sendKeys("17301216004");
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("LoginPagePasswordText")).sendKeys("qqqqqq");
 
-		an.driver.findElement(ao.getLocaator("LoginPageLoginSubmitButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("LoginPageLoginSubmitButton")).click();
 
-		an.driver.findElement(ao.getLocaator("MyPageUserSettingButton")).click();
-		an.driver.findElement(ao.getLocaator("SettingPageSignOutButton")).click();
-		an.driver.findElement(ao.getLocaator("SettingPageSignOutSureButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("MyPageUserSettingButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("SettingPageSignOutButton")).click();
+		an.driver.findElement(Android_Element_ObjectMap.getLocaator("SettingPageSignOutSureButton")).click();
 	}
 
 	public void swipeToLeft(AndroidDriver driver, int time) {

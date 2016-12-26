@@ -44,7 +44,7 @@ public class Android_IdentityAuthenticationPage_TestCase
 						Baseinfo.IdentityAuthenticationNumber);
 
 				Assert.assertEquals(Baseinfo.IdentityAuthenticationUsername,
-						Android_LoadDevice_NotReset.driver.findElement(ai.ao.getLocaator("SettingPageUsername")).getText());
+						Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("SettingPageUsername")).getText());
 				po.doLoginOutBySetPage();
 				System.out.println("Android_IdentityAuthenticationPage_TestCase运行成功……");
 			} catch (Exception e)
