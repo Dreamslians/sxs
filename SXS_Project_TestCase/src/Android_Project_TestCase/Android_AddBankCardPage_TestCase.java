@@ -13,12 +13,12 @@ public class Android_AddBankCardPage_TestCase extends BasePage
 
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
     Android_AddBankCard ab = new Android_AddBankCard();
+    private boolean loginStatus = false;
 
     @Test
     public void doRechargeTest() throws Exception
     {
         System.out.println("Android_Project_AddBankCardPage_TestCase开始运行");
-
 
         int count = 0;
         while (count <= 5)
@@ -29,18 +29,34 @@ public class Android_AddBankCardPage_TestCase extends BasePage
             {
                 if (ag.GetInuseByLoginPage().contains("1"))
                 {
+                    loginStatus = true;
                     ab.doSucceedByLogin();
                 } else if (doLoginByLoginTelephoneNumber())
                 {
+                    loginStatus = true;
                     ab.doSucceed();
                 } else
                 {
+                    loginStatus = false;
                     System.out.println("登录失败");
                 }
             } catch (Exception e)
             {
                 restartApp();
-                ab.doSucceedByLogin();
+                if (loginStatus)
+                {
+                    ab.doSucceedByLogin();
+                } else
+                {
+                    if (doLoginByLoginTelephoneNumber())
+                    {
+                        ab.doSucceed();
+                    }
+                }
+
+            } finally
+            {
+                break;
             }
         }
     }

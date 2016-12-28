@@ -1,8 +1,8 @@
 package Android_Project_TestCase;
 
+import Android_Project_BasePage.Android_HomeInvest;
+import Android_Project_ExPage.Android_GetCodeFromDatabase;
 import Android_Project_ExPage.BasePage;
-import Android_Project_ExPage.*;
-import Android_Project_TestPage.Android_HomeInvestPage;
 import org.testng.annotations.Test;
 
 /**
@@ -11,39 +11,49 @@ import org.testng.annotations.Test;
 public class Android_HomeInvestPage_TestCase extends BasePage
 {
 
-    Android_HomeInvestPage ah = new Android_HomeInvestPage();
-    PublicLoginPage pl = new PublicLoginPage();
-    PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
+    Android_HomeInvest ah = new Android_HomeInvest();
+    private boolean loginStatus = false;
 
     @Test
-    public void doHomePageInvest() throws Exception {
+    public void doHomePageInvest() throws Exception
+    {
         System.out.println("Android_HomeInvestPage_TestCase开始运行");
-        try
-        {
-            pl.doLoginByJump(Baseinfo.InvestTelephone, Baseinfo.InvestPassword);
-            System.out.println("登录成功");
-        }catch (Exception e){
-            System.out.println("登录失败");
-        }
-        if(ag.GetInuseInvestPage().contains("1"))
+        while (true)
         {
             try
             {
-                ah.doHomePageInvestTest(Baseinfo.InvestMoney);
-                po.doLoginOutByUserPage();
-                System.out.println("*************运行成功***************");
+                if (ag.GetInuseInvestPage().contains("1"))
+                {
+                    loginStatus = true;
+                    ah.doSucceedByLogin();
+                } else if (LoginJumpByInvest())
+                {
+                    loginStatus = true;
+                    ah.doSucceed();
+                } else
+                {
+                    loginStatus = false;
+                    System.out.println("失败");
+                }
             } catch (Exception e)
             {
-                System.out.println("Android_HomeInvestPage_TestCase运行失败……");
-                Android_LoadDevice_NotReset.driver.closeApp();
-                Android_LoadDevice_NotReset.driver.launchApp();
-                po.doLoginOutByResetApp();
-                System.out.println("退出当前登录账户" + Baseinfo.InvestTelephone);
-                System.out.println("*******************失败*******************");
+                restartApp();
+                if (loginStatus)
+                {
+                    ah.doSucceedByLogin();
+                } else if (LoginJumpByInvest())
+                {
+                    ah.doSucceed();
+                } else
+                {
+                    System.out.println("失败");
+                }
+
+            } finally
+            {
+                break;
             }
-        }else {
-            System.out.println("失败");
         }
     }
 }

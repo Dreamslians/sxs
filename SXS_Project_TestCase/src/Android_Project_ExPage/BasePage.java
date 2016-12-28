@@ -21,6 +21,9 @@ public class BasePage extends Android_LoadDevice_NotReset
         if (obj == null)
         {
             obj = new Android_Element_ObjectMap();
+        } else
+        {
+            System.out.println("配置文件读取失败");
         }
     }
 
@@ -36,9 +39,9 @@ public class BasePage extends Android_LoadDevice_NotReset
         Android_LoadDevice_NotReset.driver.quit();
     }
 
+    //login
     public boolean doLoginByLoginTelephoneNumber() throws Exception
     {
-        int count = 0;
         if (login())
         {
             loginFlag = true;
@@ -47,9 +50,8 @@ public class BasePage extends Android_LoadDevice_NotReset
             loginFlag = false;
         }
 
-        if (!loginFlag && count < 3)
+        if (!loginFlag)
         {
-            count++;
             login();
         }
 
@@ -71,15 +73,193 @@ public class BasePage extends Android_LoadDevice_NotReset
         return loginFlag;
     }
 
-    public void doChangeBilding_login() throws Exception
+    //修改登录密码登录
+    public boolean doLoginByChangeLoginPW() throws Exception
     {
-        pl.doLoginByJump(Baseinfo.ChangeBildingTelephone, Baseinfo.ChangeBildingPassword);
-        System.out.println("登录成功");
+        if (CL_PW())
+        {
+            loginFlag = true;
+        } else
+        {
+            loginFlag = false;
+        }
+        if (!loginFlag)
+        {
+            CL_PW();
+        }
+        return loginFlag;
     }
 
-    public void doNoJmupLogin() throws Exception
+    private boolean CL_PW() throws Exception
     {
-        pl.doLoginByNoJump(Baseinfo.ChangeBildingNewTelephone, Baseinfo.ChangeBildingPassword);
+        if (pl.doLoginByJump(Baseinfo.ChangeLoginPWTelephoneNumber, Baseinfo.ChangeLoginPWPassWord))
+        {
+            loginFlag = true;
+            System.out.println("登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println("登录失败");
+        }
+        return loginFlag;
+    }
+
+    //修改绑定手机号码登录
+    public boolean doChangeBilding_login() throws Exception
+    {
+        if (CB_login())
+        {
+            loginFlag = true;
+        } else
+        {
+            loginFlag = false;
+        }
+        if (!loginFlag)
+        {
+            CB_login();
+        }
+        return loginFlag;
+    }
+
+    private boolean CB_login() throws Exception
+    {
+        System.out.println("开始登陆操作");
+        if (pl.doLoginByJump(Baseinfo.ChangeBildingTelephone, Baseinfo.ChangeBildingPassword))
+        {
+            loginFlag = true;
+            System.out.println("登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println("登录失败");
+        }
+        return loginFlag;
+    }
+
+    //修改绑定手机号码登录（NoJump）
+    public boolean doNoJmupLogin() throws Exception
+    {
+        if (NJ_login())
+        {
+            loginFlag = true;
+        } else
+        {
+            loginFlag = false;
+        }
+        if (!loginFlag)
+        {
+            NJ_login();
+        }
+        return loginFlag;
+    }
+
+    private boolean NJ_login() throws Exception
+    {
+        if (pl.doLoginByNoJump(Baseinfo.ChangeBildingNewTelephone, Baseinfo.ChangeBildingPassword))
+        {
+            loginFlag = true;
+            System.out.println("登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println("登录失败");
+        }
+        return loginFlag;
+    }
+
+    //修改登录密码（Nojump）
+    public boolean NoJumpByChangeLoginPw() throws Exception
+    {
+        if (NJ_CL_login())
+        {
+            loginFlag = true;
+        } else
+        {
+            loginFlag = false;
+        }
+        if (!loginFlag)
+        {
+            NJ_CL_login();
+        }
+        return loginFlag;
+    }
+
+    private boolean NJ_CL_login() throws Exception
+    {
+        if (pl.doLoginByNoJump(Baseinfo.ChangeLoginPWTelephoneNumber, Baseinfo.ChangeLoginPWNewPW))
+        {
+            loginFlag = true;
+            System.out.println("登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println("登录失败");
+        }
+        return loginFlag;
+    }
+
+
+    public boolean NoJumpLoginByForgetPW() throws Exception
+    {
+        if (NJ_L_FPW())
+        {
+            loginFlag = true;
+        } else
+        {
+            loginFlag = false;
+        }
+        if (!loginFlag)
+        {
+            NJ_L_FPW();
+        }
+        return loginFlag;
+    }
+
+    private boolean NJ_L_FPW() throws Exception
+    {
+        System.out.println("开始登录操作");
+        if (pl.doLoginByNoJump(Baseinfo.ForgotPasswordTelephone, Baseinfo.ForgotPasswordNewPassword))
+        {
+            loginFlag = true;
+            System.out.println("登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println("登录失败");
+        }
+        return loginFlag;
+    }
+
+    //投资登录账户
+    public boolean LoginJumpByInvest() throws Exception
+    {
+        if (Invest_Jump_Login())
+        {
+            loginFlag = true;
+        } else
+        {
+            loginFlag = false;
+        }
+        if (!loginFlag)
+        {
+            Invest_Jump_Login();
+        }
+        return loginFlag;
+    }
+
+    private boolean Invest_Jump_Login() throws Exception
+    {
+        System.out.println("开始登录操作");
+        if (pl.doLoginByJump(Baseinfo.InvestTelephone, Baseinfo.InvestPassword))
+        {
+            loginFlag = true;
+            System.out.println("登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println("登录失败");
+        }
+        return loginFlag;
     }
 
 

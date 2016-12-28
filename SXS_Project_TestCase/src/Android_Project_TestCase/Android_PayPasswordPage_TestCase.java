@@ -19,13 +19,13 @@ public class Android_PayPasswordPage_TestCase extends BasePage
         System.out.println("Android_PayPasswordPage_TestCase……开始运行……");
         try
         {
-            pl.doLoginByJump(Baseinfo.PayPWTelephone, Baseinfo.PayPWPassword);
+            pl.doLoginByJump(Baseinfo.LoginTelephoneNumber, Baseinfo.LoginPassWord);
             System.out.println("登录成功");
         } catch (Exception e)
         {
             System.out.println("登录失败");
         }
-        if (ag.GetInusePayPWPage().contains("1"))
+        if (ag.GetInuseByLoginPage().contains("1"))
         {
             try
             {
@@ -51,7 +51,7 @@ public class Android_PayPasswordPage_TestCase extends BasePage
                 Android_LoadDevice_NotReset.driver.closeApp();
                 Android_LoadDevice_NotReset.driver.launchApp();
                 po.doLoginOutByResetApp();
-                System.out.println("退出当前登录账号" + Baseinfo.PayPWTelephone);
+                System.out.println("退出当前登录账号" + Baseinfo.LoginTelephoneNumber);
                 System.out.println("**********************失败********************");
             }
         } else

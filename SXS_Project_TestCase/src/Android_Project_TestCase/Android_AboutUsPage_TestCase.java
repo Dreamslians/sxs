@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 public class Android_AboutUsPage_TestCase extends BasePage
 {
 
-    PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
     Android_AboutUS au = new Android_AboutUS();
     private boolean loginStatus = false;
@@ -26,9 +25,10 @@ public class Android_AboutUsPage_TestCase extends BasePage
         while (count <= 3)
         {
             count++;
+            System.out.println("第" + count + "次运行");
             try
             {
-                if (ag.GetInuseByAnoutUsPage().contains("1"))
+                if (ag.GetInuseByLoginPage().contains("1"))
                 {
                     loginStatus = true;
                     au.doSucceedByLogin();

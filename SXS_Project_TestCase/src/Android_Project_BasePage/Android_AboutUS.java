@@ -2,7 +2,6 @@ package Android_Project_BasePage;
 
 import Android_Project_ExPage.Android_LoadDevice_NotReset;
 import Android_Project_ExPage.BasePage;
-import Android_Project_ExPage.Baseinfo;
 import Android_Project_ExPage.PublicLoginOutPage;
 import Android_Project_TestPage.Android_AboutUsPage;
 
@@ -31,7 +30,6 @@ public class Android_AboutUS extends BasePage
         Android_LoadDevice_NotReset.driver.launchApp();
         Thread.sleep(1000);
         po.doLoginOutByResetApp();
-        System.out.println("退出当前登录账号" + Baseinfo.AboutUSPageTelephone);
         System.out.println("**********************失败**********************");
     }
 }

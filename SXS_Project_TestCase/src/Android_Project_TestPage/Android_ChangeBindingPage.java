@@ -11,6 +11,16 @@ import Android_Project_ExPage.Android_LoadDevice_NotReset;
     public  class Android_ChangeBindingPage extends BasePage
     {
         public Android_LoadDevice_NotReset an = new Android_LoadDevice_NotReset();
+
+        public void doJumpButton() throws Exception
+        {
+            Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("JumpButton")).click();
+        }
+
+        public void doUserButton() throws Exception
+        {
+            Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("UserButton")).click();
+        }
         
         public void doSetting() throws Exception {
             Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("MyPageUserSettingButton")).click();

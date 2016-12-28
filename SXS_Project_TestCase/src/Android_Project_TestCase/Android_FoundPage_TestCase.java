@@ -1,8 +1,8 @@
 package Android_Project_TestCase;
 
+import Android_Project_BasePage.Android_FoundPage;
+import Android_Project_ExPage.Android_GetCodeFromDatabase;
 import Android_Project_ExPage.BasePage;
-import Android_Project_ExPage.*;
-import Android_Project_TestPage.Android_FoundPage;
 import org.testng.annotations.Test;
 
 /**
@@ -10,10 +10,9 @@ import org.testng.annotations.Test;
  */
 public class Android_FoundPage_TestCase extends BasePage
 {
-    Android_FoundPage af = new Android_FoundPage();
-    PublicLoginPage pl = new PublicLoginPage();
-    PublicLoginOutPage po = new PublicLoginOutPage();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
+    Android_FoundPage af = new Android_FoundPage();
+    private boolean loginStatus = false;
 
     @Test
     public void doFoundPageTest() throws Exception
@@ -21,30 +20,33 @@ public class Android_FoundPage_TestCase extends BasePage
         System.out.println("Android_FoundPage_TestCase……开始运行……");
         try
         {
-            pl.doLoginByJump(Baseinfo.FoundPageLoginTelePhone, Baseinfo.FoundPagePassword);
-            System.out.println("登录成功");
+            if (ag.GetInuseByLoginPage().contains("1"))
+            {
+                loginStatus = true;
+                af.doSucceedByLogin();
+            } else if (doLoginByLoginTelephoneNumber())
+            {
+                loginStatus = true;
+                af.doSucceed();
+            } else
+            {
+                loginStatus = false;
+                System.out.println("失败");
+            }
         } catch (Exception e)
         {
-            System.out.println("登录失败");
-        }
-        if (ag.GetInuseByFoundPage().contains("1"))
-        {
-            try
+            af.restartApp();
+            if (loginStatus)
             {
-                af.doFoundPageTest();
-                po.doLoginOutByUserPage();
-                System.out.println("Android_FoundPage_TestCase……运行成功……");
-            } catch (Exception e)
+                af.doSucceedByLogin();
+            } else if (doLoginByLoginTelephoneNumber())
             {
-                System.out.println("……运行失败……");
-                Android_LoadDevice_NotReset.driver.closeApp();
-                Android_LoadDevice_NotReset.driver.launchApp();
-                po.doLoginOutByResetApp();
-                System.out.println("**********************失败*********************");
+                af.doSucceed();
+            } else
+            {
+                System.out.println("失败");
             }
-        } else
-        {
-            System.out.println("失败");
+
         }
     }
 

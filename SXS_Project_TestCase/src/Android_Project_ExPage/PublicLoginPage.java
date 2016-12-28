@@ -32,11 +32,14 @@ public class PublicLoginPage
     }
 
     private boolean loginFlag = false;
+
     public boolean doCheck() throws Exception
     {
-        if(Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("MyPageTittle")).getText().contains("我的资产")){
+        if (Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("MyPageTittle")).getText().contains("我的资产"))
+        {
             loginFlag = true;
-        }else{
+        } else
+        {
             loginFlag = false;
         }
         return loginFlag;
@@ -49,30 +52,43 @@ public class PublicLoginPage
         Thread.sleep(300);
         doUserButton();
         doLoginPageUsernameText(TelephoneNumber);
-        System.out.println("输入用户名："+TelephoneNumber);
-        System.out.println("输入密码："+PassWord);
+        System.out.println("输入用户名：" + TelephoneNumber);
+        doLoginPagePasswordText(PassWord);
+        System.out.println("输入密码：" + PassWord);
         doLoginPageLoginSubmitButton();
         Thread.sleep(500);
-        if(doCheck()){
+        if (doCheck())
+        {
             loginFlag = true;
-            System.out.println(TelephoneNumber+"：登录成功");
-        }else{
+            System.out.println(TelephoneNumber + "：登录成功");
+        } else
+        {
             loginFlag = false;
-            System.out.println(TelephoneNumber+"：登录失败");
+            System.out.println(TelephoneNumber + "：登录失败");
         }
         return loginFlag;
     }
 
-    public void doLoginByNoJump(String TelephoneNumber, String PassWord) throws Exception
+    public boolean doLoginByNoJump(String TelephoneNumber, String PassWord) throws Exception
     {
         Thread.sleep(300);
         doLoginPageUsernameText(TelephoneNumber);
-        System.out.println("输入用户名："+TelephoneNumber);
+        System.out.println("输入用户名：" + TelephoneNumber);
         doLoginPagePasswordText(PassWord);
-        System.out.println("输入密码："+PassWord);
+        System.out.println("输入密码：" + PassWord);
         doLoginPageLoginSubmitButton();
         Thread.sleep(500);
+        if (doCheck())
+        {
+            loginFlag = true;
+            System.out.println(TelephoneNumber + "：登录成功");
+        } else
+        {
+            loginFlag = false;
+            System.out.println(TelephoneNumber + "：登录失败");
+        }
         Assert.assertEquals("我的资产(元)", Android_LoadDevice_NotReset.driver.findElement(Android_Element_ObjectMap.getLocaator("MyPageTittle")).getText());
-        System.out.println(TelephoneNumber+"：登录成功");
+        System.out.println(TelephoneNumber + "：登录成功");
+        return loginFlag;
     }
 }
