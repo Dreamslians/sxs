@@ -37,3 +37,40 @@ About_Assert:
 App_Assert:
   type: xpath
   value: "//p[contains(.,'极致体验')]"
+# InvitePage 元素库--------------------------------------------------------------------------------------------------------------------------------------------
+Telephone:
+  type: xpath
+  vault:  "//input[@id='tel']"
+TelephoneTotal:
+  type: xpath
+  vault: "//div[contains(.,'您输入的手机号码有误')]"
+Password:
+  type: xpath
+  vault: "//input[@id='password']"
+ImageVerify:
+  type: xpath
+  vault: "//img[@id='chgmcode']"
+InputImageVerify:
+  type: xpath
+  vault: "//input[@id='mcode_img']"
+GetVerify:
+  type: xpath
+  vault: "//input[@id='djs']"
+InputCodeVerify:
+  type: xpath
+  vault: "//input[@id='mcode']"
+CodeVerifyTotal:
+  type: xpath
+  vault: "//span[contains(.,'请输入正确的短信验证码')]"
+AgreeButton:
+  type: xpath
+  vault: "//i[@class='checkBox']"
+UserXieYi:
+  type: xpath
+  vault: "//span[@id='xyi']"
+CloseButton:
+  type: xpath
+  vaule: "//a[@class='model-close']"
+Register:
+  type: xpath
+  vault: "//button[@id='register']"

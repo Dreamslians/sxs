@@ -180,33 +180,6 @@ public class Android_GetCodeFromDatabase
         return inuse;
     }
 
-    public String GetInuseByIAPage()
-    {
-        String inuse = "";
-        try
-        {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection(Baseinfo.SqlUrl, Baseinfo.User, Baseinfo.Password);
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    Baseinfo.AssIAPageByInUseID);
-            rs.next();
-            inuse = rs.getString("inuse");
-        } catch (Exception e)
-        {
-            System.out.println(e);
-        }
-        if (inuse.contains("1"))
-        {
-            System.out.println("当前为登录状态");
-
-        } else
-        {
-            System.out.println("当前账户未登录");
-        }
-        return inuse;
-    }
-
     public String GetInuseByLoginPage()
     {
         String inuse = "";

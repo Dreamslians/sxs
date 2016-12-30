@@ -1,9 +1,8 @@
 package Android_Project_TestCase;
 
+import Android_Project_BasePage.Android_NewsAll;
+import Android_Project_ExPage.Android_GetCodeFromDatabase;
 import Android_Project_ExPage.BasePage;
-import Android_Project_ExPage.*;
-import Android_Project_TestPage.Android_NewsAllPage;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
 /**
@@ -11,38 +10,45 @@ import org.testng.annotations.Test;
  */
 public class Android_NewsAllPage_TestCase extends BasePage
 {
-
-    Android_NewsAllPage aa = new Android_NewsAllPage();
-    PublicLoginPage pl = new PublicLoginPage();
-    PublicLoginOutPage po = new PublicLoginOutPage();
+    Android_NewsAll an = new Android_NewsAll();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
+    private boolean loginStatus = false;
 
     @Test
     public void doNewsAllPageTest() throws Exception
     {
         try
         {
-            pl.doLoginByJump(Baseinfo.LoginTelephoneNumber, Baseinfo.LoginPassWord);
-            System.out.println("登录成功");
-        }catch (Exception e){
-            System.out.println("失败");
-        }
-        if(ag.GetInuseByLoginPage().contains("1"))
-        {
-            try
+            if (ag.GetInuseByLoginPage().contains("1"))
             {
-                aa.doHomePageNewsTest();
-                po.doLoginOutByUserPage();
-                System.out.println("****************成功****************");
-            } catch (NoSuchElementException e)
+                loginStatus = true;
+                an.doSucceedByLogin();
+            } else if (doLoginByLoginTelephoneNumber())
             {
-                Android_LoadDevice_NotReset.driver.closeApp();
-                Android_LoadDevice_NotReset.driver.launchApp();
-                po.doLoginOutByResetApp();
-                System.out.println("******************失败******************");
+                loginStatus = true;
+                an.doSucceed();
+            } else
+            {
+                loginStatus = false;
+                System.out.println("失败");
             }
-        }else{
-            System.out.println("失败");
+        } catch (Exception e)
+        {
+            restartApp();
+            if (loginStatus)
+            {
+                an.doSucceedByLogin();
+            } else
+            {
+                if (doLoginByLoginTelephoneNumber())
+                {
+                    loginStatus = true;
+                    an.doSucceed();
+                } else
+                {
+                    System.out.println("失败");
+                }
+            }
         }
     }
 }

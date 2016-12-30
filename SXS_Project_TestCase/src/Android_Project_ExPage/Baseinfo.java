@@ -3,7 +3,7 @@ package Android_Project_ExPage;
 public class Baseinfo
 {
 
-    public static final String AndroidDriverURL = "http://192.168.1.90:4723/wd/hub";
+    public static final String AndroidDriverURL = "http://192.168.1.105:4723/wd/hub";
 
     public static final String AndroidDriverName = "192.168.56.101:5555";
 
@@ -65,11 +65,9 @@ public class Baseinfo
     //************************************************************************************************
 
     //************************身份证实名操作页面所需值************************
-    public static final String IdentityAuthenticationTelephoneNumber = "17600110001";
-    public static final String IdentityAuthenticationPassWord = "qqqqqq";
+
     public static final String IdentityAuthenticationUsername = "宋培东";
     public static final String IdentityAuthenticationNumber = "411122199309258133";
-    public static final String AssIAPageByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17600110001'";
     //************************************************************************************************
 
     //************************忘记密码页面操作所需值************************

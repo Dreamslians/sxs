@@ -1,6 +1,5 @@
 package Android_Project_TestCase;
 
-import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_SF_HistoryPage;
 import org.testng.annotations.Test;
@@ -36,13 +35,14 @@ public class Android_SF_HistoryPage_TestCase extends BasePage
                 ah.doFS_HistoryTest();
                 po.doLoginOutByUserPage();
                 System.out.println("*********************运行成功*********************");
-            }catch (Exception e){
-                Android_LoadDevice_NotReset.driver.closeApp();
-                Android_LoadDevice_NotReset.driver.launchApp();
+            } catch (Exception e)
+            {
+                restartApp();
                 po.doLoginOutByResetApp();
                 System.out.println("*********************失败************************");
             }
-        }else {
+        } else
+        {
             System.out.println("失败");
         }
     }

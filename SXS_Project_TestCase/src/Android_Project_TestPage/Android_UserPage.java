@@ -37,6 +37,14 @@ public class Android_UserPage extends BasePage
     }
 
     public void doUserPageTest() throws Exception {
+        /*
+             ----------------
+            +       +       +       /\/|+++(\
+           + +     + +     +  +    /\/|++++(\
+          +   +  +    +  +     +  /\/|+++++(\
+         +     +       +        +/\/|++++++(\
+         -------------------------
+         */
         doUserpgaeYseterday();
         Thread.sleep(200);
         doReturnbutton();

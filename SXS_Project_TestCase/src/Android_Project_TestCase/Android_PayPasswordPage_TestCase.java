@@ -1,63 +1,54 @@
 package Android_Project_TestCase;
 
+import Android_Project_BasePage.Android_PayPW;
+import Android_Project_ExPage.Android_GetCodeFromDatabase;
 import Android_Project_ExPage.BasePage;
-import Android_Project_ExPage.*;
-import Android_Project_TestPage.Android_PayPasswordPage;
 import org.testng.annotations.Test;
 
 public class Android_PayPasswordPage_TestCase extends BasePage
 {
 
-    Android_PayPasswordPage ap = new Android_PayPasswordPage();
-    PublicLoginPage pl = new PublicLoginPage();
-    PublicLoginOutPage po = new PublicLoginOutPage();
+    Android_PayPW ap = new Android_PayPW();
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
+    private boolean loginStatus = false;
 
     @Test
     public void SettingPayPassword() throws Exception
     {
         System.out.println("Android_PayPasswordPage_TestCase……开始运行……");
+
         try
         {
-            pl.doLoginByJump(Baseinfo.LoginTelephoneNumber, Baseinfo.LoginPassWord);
-            System.out.println("登录成功");
+            if (ag.GetInuseByLoginPage().contains("1"))
+            {
+                loginStatus = true;
+                ap.doSucceedByLogin();
+            } else if (doLoginByLoginTelephoneNumber())
+            {
+                loginStatus = true;
+                ap.doSucceed();
+            } else
+            {
+                loginStatus = false;
+                System.out.println("失败");
+            }
         } catch (Exception e)
         {
-            System.out.println("登录失败");
-        }
-        if (ag.GetInuseByLoginPage().contains("1"))
-        {
-            try
+            restartApp();
+            if (loginStatus)
             {
-                ap.SendPassWord();
-                Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-                Thread.sleep(100);
-                Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-                Thread.sleep(100);
-                Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-                Thread.sleep(100);
-                Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-                Thread.sleep(100);
-                Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-                Thread.sleep(100);
-                Android_LoadDevice_NotReset.driver.pressKeyCode(8);
-                Thread.sleep(100);
-                ap.doSettingPageSetPasswordSubmitButton();
-                po.doLoginOutBySetPage();
-                System.out.println("Android_PayPasswordPage_TestCase……运行成功……");
-            } catch (Exception e)
+                ap.doSucceedByLogin();
+            } else
             {
-                System.out.println("Android_PayPasswordPage_TestCase……运行失败……");
-                Android_LoadDevice_NotReset.driver.closeApp();
-                Android_LoadDevice_NotReset.driver.launchApp();
-                po.doLoginOutByResetApp();
-                System.out.println("退出当前登录账号" + Baseinfo.LoginTelephoneNumber);
-                System.out.println("**********************失败********************");
+                if (doLoginByLoginTelephoneNumber())
+                {
+                    loginStatus = true;
+                    ap.doSucceed();
+                } else
+                {
+                    System.out.println("失败");
+                }
             }
-        } else
-        {
-            System.out.println("失败");
         }
-
     }
 }
