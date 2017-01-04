@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="apache-mime4j-0.6">
     <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-java-2.46.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-server-standalone-2.46.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/apache-mime4j-0.6.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/bsh-1.3.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/cglib-nodep-2.1_3.jar!/" />
@@ -30,14 +32,14 @@
       <root url="jar://$USER_HOME$/Downloads/JAR类包/junit-4.12.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/jxl.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/jyaml-1.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/mysql-connector-java-5.1.26-bin.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/nekohtml-1.9.22.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/netty-3.5.7.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JAR类包/ojdbc14.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/phantomjsdriver-1.2.1.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/re-sign.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/sac-1.3.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-java-2.46.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-java-2.47.1.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/JAR类包/selenium-server-standalone-2.46.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/serializer-2.7.2.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/servlet-api.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/testng-6.8.5.jar!/" />

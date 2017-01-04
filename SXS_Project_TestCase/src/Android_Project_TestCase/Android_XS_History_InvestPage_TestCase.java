@@ -1,6 +1,5 @@
 package Android_Project_TestCase;
 
-import Android_Project_ExPage.BasePage;
 import Android_Project_ExPage.*;
 import Android_Project_TestPage.Android_XSInvestPage;
 import Android_Project_TestPage.Android_XS_History_InvestPage;
@@ -18,16 +17,18 @@ public class Android_XS_History_InvestPage_TestCase extends BasePage
     Android_GetCodeFromDatabase ag = new Android_GetCodeFromDatabase();
 
     @Test(priority = 1)
+
     public void doXS_History_InvestTest() throws Exception
     {
         try
         {
             pl.doLoginByJump(Baseinfo.InvestTelephone, Baseinfo.InvestPassword);
             System.out.println("登录成功");
-        }catch (Exception e){
+        } catch (Exception e)
+        {
             System.out.println("登录失败");
         }
-        if(ag.GetInuseInvestPage().contains("1"))
+        if (ag.GetInuseInvestPage().contains("1"))
         {
             try
             {
@@ -42,7 +43,8 @@ public class Android_XS_History_InvestPage_TestCase extends BasePage
                 po.doLoginOutByResetApp();
                 System.out.println("************************失败*************************");
             }
-        }else{
+        } else
+        {
             System.out.println("失败");
         }
     }
@@ -54,10 +56,11 @@ public class Android_XS_History_InvestPage_TestCase extends BasePage
         {
             pl.doLoginByJump(Baseinfo.InvestTelephone, Baseinfo.InvestPassword);
             System.out.println("登录成功");
-        }catch (Exception e){
+        } catch (Exception e)
+        {
             System.out.println("登录失败");
         }
-        if(ag.GetInuseInvestPage().contains("1"))
+        if (ag.GetInuseInvestPage().contains("1"))
         {
             try
             {
@@ -70,7 +73,8 @@ public class Android_XS_History_InvestPage_TestCase extends BasePage
                 Android_LoadDevice_NotReset.driver.launchApp();
                 po.doLoginOutByResetApp();
             }
-        }else{
+        } else
+        {
             System.out.println("失败");
         }
     }
