@@ -29,12 +29,16 @@ public class BasePage
         String is = new String(ss);
         return is;
     }
-    public static Random random(){
+
+    public static Random random()
+    {
         Random random = new Random();
         int a = random.nextInt(10);
         return random;
     }
-    public static String randomtelephonenumber() {
+
+    public static String randomtelephonenumber()
+    {
 //		String a1 = "13";
 //		String a2 = "15";
 //		String a3 = "18";
@@ -46,7 +50,8 @@ public class BasePage
         String telephonenumber4 = a4 + random.nextInt(1000000000);
         return telephonenumber4;
     }
-    public String GetVerifyByRegisterPage()
+
+    public static String GetVerifyByRegisterPage()
     {
         String verify = "";
         try
@@ -55,6 +60,41 @@ public class BasePage
             Connection con = DriverManager.getConnection(Baseinfo.SqlUrl, Baseinfo.User, Baseinfo.Password);
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(Baseinfo.GetVerifyByRegister);
+            rs.next();
+            verify = rs.getString("verify");
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return verify;
+    }
+    public static String GetVerifyByRegisterPage_Assert()
+    {
+        String user_id = "";
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(Baseinfo.SqlUrl, Baseinfo.User, Baseinfo.Password);
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(Baseinfo.GetVerifyByRegister_Assert);
+            rs.next();
+            user_id = rs.getString("user_id");
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return user_id;
+    }
+
+    public static String GetVerifyByRegisterPage_mobile()
+    {
+        String verify = "";
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(Baseinfo.SqlUrl, Baseinfo.User, Baseinfo.Password);
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(Baseinfo.GetVerifyByRegister_mobile);
             rs.next();
             verify = rs.getString("verify");
         } catch (Exception e)

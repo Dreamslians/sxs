@@ -1,5 +1,7 @@
 package Page;
 
+import Data.BasePage;
+import Data.Baseinfo;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -70,13 +72,13 @@ public class SXS_Invite_Page extends Page
     public void RegisterTestByGetCode(String Telephone, String Password, String ImageVerify)
     {
         InputTelephone(Telephone);
-        if (getElement("TelephoneTotal").isDisplayed())
-        {
-            System.out.println("手机号码输入有误");
-        } else
-        {
-            InputPassword(Password);
-        }
+//        if (getElement("TelephoneTotal").isEnabled())
+//        {
+//            System.out.println("手机号码输入有误");
+//        } else
+//        {
+        InputPassword(Password);
+//        }
         clickImageVerify();
         InputImageVerify(ImageVerify);
         GetVerify();
@@ -85,16 +87,17 @@ public class SXS_Invite_Page extends Page
     public void RegisterInputCode(String CodeVerify)
     {
         InputCodeVerify(CodeVerify);
-        AgreeButton();
-        UserXieYi();
-        CloseButton();
+//        AgreeButton();
+//        UserXieYi();
+//        CloseButton();
         Register();
-        if (getElement("CodeVerifyTotal").isDisplayed())
+
+        if (BasePage.GetVerifyByRegisterPage_Assert().isEmpty())
         {
-            System.out.println("验证码输入错误");
+            System.out.println("注册失败");
         } else
         {
-            System.out.println("注册成功");
+            System.out.println("账户" + Baseinfo.Telephone + "注册成功");
         }
     }
 
