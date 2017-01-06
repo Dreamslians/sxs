@@ -64,6 +64,7 @@ public class Test_Invite_Page extends BasePage
         sq.SendCode(GetVerifyByRegisterPage());
 
         driver.close();
+        //driver.quit();
     }
 
     @Test(priority = 4)
