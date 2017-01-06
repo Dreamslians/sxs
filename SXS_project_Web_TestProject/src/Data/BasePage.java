@@ -68,6 +68,7 @@ public class BasePage
         }
         return verify;
     }
+
     public static String GetVerifyByRegisterPage_Assert()
     {
         String user_id = "";
@@ -83,6 +84,7 @@ public class BasePage
         {
             System.out.println(e);
         }
+        System.out.println("注册账户的用户ID:" + user_id);
         return user_id;
     }
 

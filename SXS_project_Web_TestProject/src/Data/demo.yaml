@@ -97,3 +97,26 @@ InputVC:
 Register1:
   type: xpath
   value: "//span[contains(.,'600元！')]"
+
+Quan_Tel:
+  type: xpath
+  value: "//input[@class='tel']"
+Quan_PW:
+  type: xpath
+  value: "//input[@class='pwd']"
+Quan_ImageVerify:
+  type: xpath
+  value: "//img[@class='Img1']"
+Quan_InputImageVerify:
+  type: xpath
+  value: "//input[@class='imgText']"
+Quan_GetCode:
+  type: xpath
+  value: "//div[@class='btn phoneBtn']"
+Quan_InputCode:
+  type: xpath
+  value: "//input[@class='phone']"
+Quan_Register:
+  type: xpath
+  value: "//div[@class='money reg']"
+

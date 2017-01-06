@@ -72,24 +72,32 @@ public class SXS_Invite_Page extends Page
     public void RegisterTestByGetCode(String Telephone, String Password, String ImageVerify)
     {
         InputTelephone(Telephone);
-//        if (getElement("TelephoneTotal").isEnabled())
-//        {
-//            System.out.println("手机号码输入有误");
-//        } else
-//        {
+        if (Baseinfo.Telephone.length() < 11)
+        {
+            System.out.println("手机号码输入错误");
+        } else
+        {
+            System.out.println("手机号码输入正确：" + Baseinfo.Telephone);
+        }
         InputPassword(Password);
-//        }
+        System.out.println("密码为：" + Baseinfo.PassWord);
         clickImageVerify();
         InputImageVerify(ImageVerify);
+        if (Baseinfo.ImageVerify.length() < 4)
+        {
+            System.out.println("图文验证码输入错误");
+            InputImageVerify(ImageVerify);
+        } else
+        {
+            System.out.println("图文验证码验证通过:"+Baseinfo.ImageVerify);
+        }
         GetVerify();
     }
 
     public void RegisterInputCode(String CodeVerify)
     {
         InputCodeVerify(CodeVerify);
-//        AgreeButton();
-//        UserXieYi();
-//        CloseButton();
+
         Register();
 
         if (BasePage.GetVerifyByRegisterPage_Assert().isEmpty())

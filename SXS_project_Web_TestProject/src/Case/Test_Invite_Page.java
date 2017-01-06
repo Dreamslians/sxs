@@ -4,6 +4,7 @@ import Data.BasePage;
 import Data.Baseinfo;
 import Page.SXS_Invite_Mobile;
 import Page.SXS_Invite_Page;
+import Page.SXS_Invite_Quanmama;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -49,4 +50,51 @@ public class Test_Invite_Page extends BasePage
         driver.close();
     }
 
+    @Test(priority = 3)
+    public void doRegister_Invite_Quanmama() throws Exception
+    {
+        Dimension d = new Dimension(450, 800);
+        driver.manage().window().setSize(d);
+        Thread.sleep(500);
+        driver.get(Baseinfo.URL_invite_quanmama);
+        SXS_Invite_Quanmama sq = new SXS_Invite_Quanmama(driver);
+
+        sq.SendTel_ImageVerify(Baseinfo.Telephone, Baseinfo.PassWord, Baseinfo.ImageVerify);
+
+        sq.SendCode(GetVerifyByRegisterPage());
+
+        driver.close();
+    }
+
+    @Test(priority = 4)
+    public void doRegister_Invite_Mobile1() throws Exception
+    {
+        Dimension d = new Dimension(450, 800);
+        driver.manage().window().setSize(d);
+        Thread.sleep(500);
+        driver.get(Baseinfo.URL_invite_mobile1);
+        SXS_Invite_Quanmama sq = new SXS_Invite_Quanmama(driver);
+
+        sq.SendTel_ImageVerify(Baseinfo.Telephone, Baseinfo.PassWord, Baseinfo.ImageVerify);
+
+        sq.SendCode(GetVerifyByRegisterPage());
+
+        driver.close();
+    }
+
+    @Test(priority = 5)
+    public void doRegister_Invite_fanli_11() throws Exception
+    {
+        Dimension d = new Dimension(450, 800);
+        driver.manage().window().setSize(d);
+        Thread.sleep(500);
+        driver.get(Baseinfo.URL_invite_fanli_11);
+        SXS_Invite_Quanmama sq = new SXS_Invite_Quanmama(driver);
+
+        sq.SendTel_ImageVerify(Baseinfo.Telephone, Baseinfo.PassWord, Baseinfo.ImageVerify);
+
+        sq.SendCode(GetVerifyByRegisterPage());
+
+        driver.close();
+    }
 }
