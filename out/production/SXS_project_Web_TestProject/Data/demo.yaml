@@ -1,0 +1,122 @@
+#说明
+#input:
+#  type: id
+#  value: kw
+#searchbutton: {type: id,value: su}
+# 以上两种格式都可以
+
+
+# HomePage 元素库--------------------------------------------------------------------------------------------------------------------------------------------
+HomePageLog:
+  type: xpath
+  value: "//a[contains(.,'首页')]"
+Product_project:
+  type: xpath
+  value: "//a[contains(.,'产品详情')]"
+Saft:
+  type: xpath
+  value: "//a[contains(.,'安全保障')]"
+AboutUs:
+  type: xpath
+  value: "//a[contains(.,'关于我们')]"
+App_download:
+  type: xpath
+  value: "//a[contains(.,'APP下载')]"
+HomePage_Assert:
+  type: xpath
+  value: "//p[contains(.,'世人只记住师兄的500年，却无人知晓我等你的300万年')]"
+Product_Assert:
+  type: xpath
+  value: "//p[contains(.,'下载小沙，收益天天见')]"
+Saft_Assert:
+  type: xpath
+  value: "//p[contains(.,'下载小沙，安全有宝杖')]"
+About_Assert:
+  type: xpath
+  value: "//span[contains(.,'客服工作时间  09:00-21:00')]"
+App_Assert:
+  type: xpath
+  value: "//p[contains(.,'极致体验')]"
+
+Telephone:
+  type: xpath
+  value: "//input[@id='tel']"
+TelephoneTotal:
+  type: xpath
+  value: "//div[contains(.,'您输入的手机号码有误')]"
+Password:
+  type: xpath
+  value: "//input[@id='password']"
+ImageVerify:
+  type: xpath
+  value: "//img[@id='chgmcode']"
+InputImageVerify:
+  type: xpath
+  value: "//input[@id='mcode_img']"
+GetVerify:
+  type: xpath
+  value: "//input[@id='djs']"
+InputCodeVerify:
+  type: xpath
+  value: "//input[@id='mcode']"
+CodeVerifyTotal:
+  type: xpath
+  value: "//span[contains(.,'请输入正确的短信验证码')]"
+AgreeButton:
+  type: xpath
+  value: "//i[@class='checkBox']"
+UserXieYi:
+  type: xpath
+  value: "//span[@id='xyi']"
+CloseButton:
+  type: xpath
+  value: "//a[@class='model-close']"
+Register:
+  type: xpath
+  value: "//button[@id='register']"
+
+
+Tele:
+  type: xpath
+  value: "//input[@id='telIn']"
+Pw:
+  type: xpath
+  value: "//input[@class='pwd']"
+ImageV:
+  type: xpath
+  value: "//img[@class='Img1']"
+InputImage:
+  type: xpath
+  value: "//input[@class='imgText']"
+GetVerifyCode:
+  type: xpath
+  value: "//div[@class='btn phoneBtn']"
+InputVC:
+  type: xpath
+  value: "//input[@class='phone']"
+Register1:
+  type: xpath
+  value: "//span[contains(.,'600元！')]"
+
+Quan_Tel:
+  type: xpath
+  value: "//input[@class='tel']"
+Quan_PW:
+  type: xpath
+  value: "//input[@class='pwd']"
+Quan_ImageVerify:
+  type: xpath
+  value: "//img[@class='Img1']"
+Quan_InputImageVerify:
+  type: xpath
+  value: "//input[@class='imgText']"
+Quan_GetCode:
+  type: xpath
+  value: "//div[@class='btn phoneBtn']"
+Quan_InputCode:
+  type: xpath
+  value: "//input[@class='phone']"
+Quan_Register:
+  type: xpath
+  value: "//div[@class='money reg']"
+

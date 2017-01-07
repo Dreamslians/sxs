@@ -49,6 +49,13 @@
       <root url="jar://$USER_HOME$/Downloads/JAR类包/xalan-2.7.2.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/xercesImpl-2.11.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/JAR类包/xml-apis-1.4.01.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JSONObject所必须的6个包/JSONObject所必须的6个包/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JSONObject所必须的6个包/JSONObject所必须的6个包/commons-collections-3.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JSONObject所必须的6个包/JSONObject所必须的6个包/commons-lang-2.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JSONObject所必须的6个包/JSONObject所必须的6个包/commons-logging.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JSONObject所必须的6个包/JSONObject所必须的6个包/ezmorph-1.0.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JSONObject所必须的6个包/JSONObject所必须的6个包/json-lib-2.1-jdk15.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jettison.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

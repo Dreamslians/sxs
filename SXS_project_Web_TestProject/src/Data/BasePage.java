@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -30,24 +32,24 @@ public class BasePage
         return is;
     }
 
-    public static Random random()
+    public static int random()
     {
         Random random = new Random();
         int a = random.nextInt(10);
-        return random;
+        return a;
     }
 
     public static String randomtelephonenumber()
     {
-//		String a1 = "13";
-//		String a2 = "15";
-//		String a3 = "18";
+        String a1 = "13";
+        String a2 = "15";
+        String a3 = "18";
         String a4 = "17";
         Random random = new Random();
-//		String telephonenumber1 = a1 + random.nextInt(1000000000);
-//		String telephonenumber2 = a2 + random.nextInt(1000000000);
-//		String telephonenumber3 = a3 + random.nextInt(1000000000);
-        String telephonenumber4 = a4 + random.nextInt(1000000000);
+        String telephonenumber1 = a1 + "3333" + random.nextInt(100000);
+        String telephonenumber2 = a2 + "2222" + random.nextInt(100000);
+        String telephonenumber3 = a3 + "1111" + random.nextInt(100000);
+        String telephonenumber4 = a4 + "0000" + random.nextInt(100000);
         return telephonenumber4;
     }
 
@@ -88,6 +90,7 @@ public class BasePage
         return user_id;
     }
 
+
     public static String GetVerifyByRegisterPage_mobile()
     {
         String verify = "";
@@ -104,5 +107,12 @@ public class BasePage
             System.out.println(e);
         }
         return verify;
+    }
+
+
+    public void showData()
+    {
+        SimpleDateFormat sf = new SimpleDateFormat(("yyyy-MM-dd HH:mm:ss"));
+        System.out.println(sf.format(new Date()));
     }
 }

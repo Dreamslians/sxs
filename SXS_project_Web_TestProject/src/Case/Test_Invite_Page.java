@@ -64,7 +64,6 @@ public class Test_Invite_Page extends BasePage
         sq.SendCode(GetVerifyByRegisterPage());
 
         driver.close();
-        //driver.quit();
     }
 
     @Test(priority = 4)
@@ -95,7 +94,7 @@ public class Test_Invite_Page extends BasePage
         sq.SendTel_ImageVerify(Baseinfo.Telephone, Baseinfo.PassWord, Baseinfo.ImageVerify);
 
         sq.SendCode(GetVerifyByRegisterPage());
-
+        showData();
         driver.close();
     }
 }
